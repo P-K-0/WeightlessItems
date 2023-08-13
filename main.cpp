@@ -59,7 +59,8 @@ void Listener(F4SE::MessagingInterface::Message* msg)
 
 	case F4SE::MessagingInterface::kGameDataReady:
 
-		WeightlessItems::Init();
+		if (msg->data)
+			WeightlessItems::Init();
 
 		break;
 
